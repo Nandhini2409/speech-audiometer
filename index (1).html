@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Speech Audiometer – Project Portfolio</title>
+<style>
+:root{--bg:#f6f9fb;--card:#fff;--ink:#12303d;--mute:#5b727d;--acc:#0e7c86;--acc2:#e8f4f5;--line:#dbe6ea;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a20;--card:#15262e;--ink:#e6f1f4;--mute:#9db3bc;--acc:#4cc3cc;--acc2:#183840;--line:#25404a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1a20;--card:#15262e;--ink:#e6f1f4;--mute:#9db3bc;--acc:#4cc3cc;--acc2:#183840;--line:#25404a;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;line-height:1.65}
+nav{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--line);display:flex;gap:18px;padding:12px 20px;overflow-x:auto;z-index:5;white-space:nowrap}
+nav a{color:var(--mute);text-decoration:none;font-size:14px;font-weight:600}
+nav a:hover{color:var(--acc)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{padding:64px 0 48px;text-align:center}
+.tag{display:inline-block;background:var(--acc2);color:var(--acc);padding:4px 14px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:.5px}
+h1{font-size:clamp(28px,5vw,44px);margin:16px 0 8px;line-height:1.2}
+header p{color:var(--mute);max-width:620px;margin:0 auto 22px;font-size:17px}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:11px 24px;border-radius:8px;text-decoration:none;font-weight:600}
+section{padding:36px 0}
+h2{font-size:26px;margin:0 0 6px}
+h2::after{content:"";display:block;width:48px;height:3px;background:var(--acc);margin-top:8px;border-radius:2px}
+.lead{color:var(--mute);margin:14px 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card h3{margin:0 0 6px;font-size:17px;color:var(--acc)}
+.card p{margin:0;color:var(--mute);font-size:15px}
+.steps{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}
+.step{background:var(--acc2);border:1px solid var(--line);padding:10px 16px;border-radius:8px;font-weight:600;font-size:14px}
+.arrow{color:var(--acc);font-weight:700}
+.tablebox{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:15px}
+th{background:var(--acc2);color:var(--acc)}
+ul{margin:0;padding-left:20px;color:var(--mute)}
+li{margin:6px 0}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:18px 0;text-align:center}.fig svg{width:100%;height:auto;max-width:100%}.fig figcaption{color:var(--mute);font-size:13px;margin-top:8px}.bx{fill:var(--acc2);stroke:var(--acc);stroke-width:1.5}.tx{fill:var(--ink);font:600 13px 'Segoe UI',Arial,sans-serif;text-anchor:middle}.sm{fill:var(--mute);font:12px 'Segoe UI',Arial,sans-serif;text-anchor:middle}.ln{stroke:var(--acc);stroke-width:2;fill:none}.gr{stroke:var(--line);stroke-width:1}.who{background:var(--card);border:1px solid var(--line);border-radius:12px;display:inline-block;padding:12px 26px;margin:0 0 20px;text-align:left;font-size:15px}footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:var(--mute);font-size:14px;margin-top:20px}
+</style>
+</head>
+<body>
+<nav><a href="#about">About</a><a href="#hearing">Hearing</a><a href="#loss">Hearing Loss</a><a href="#working">Block Diagram</a><a href="#components">Components</a><a href="#tests">Tests</a><a href="#setup">Environment</a><a href="#uses">Applications</a><a href="#ref">Reference</a></nav>
+
+<div class="wrap">
+<header>
+<span class="tag">21BMC402J · BIOMEDICAL EQUIPMENTS FOR CLINICAL APPLICATIONS</span>
+<h1>Speech Audiometer</h1>
+<p>A device that measures a person’s ability to hear and understand speech, supporting early detection and assessment of hearing loss.</p>
+<div class="who"><strong>Nandhini Settu</strong> · RA2311013010048<br>Department of Biomedical Engineering</div>
+<figure class="fig" style="max-width:520px;margin:28px auto 0"><svg viewBox="0 0 420 230" role="img" aria-label="Speech audiometer illustration"><rect x="40" y="60" width="340" height="130" rx="16" class="bx"/><rect x="62" y="80" width="150" height="60" rx="6" style="fill:var(--ink)"/><text x="137" y="106" class="tx" style="fill:var(--bg)">SRT  35 dB HL</text><text x="137" y="126" class="sm" style="fill:var(--bg)">Right ear · Speech</text><circle cx="260" cy="108" r="22" class="bx"/><line x1="260" y1="108" x2="260" y2="92" class="ln"/><circle cx="326" cy="108" r="22" class="bx"/><line x1="326" y1="108" x2="338" y2="96" class="ln"/><text x="260" y="148" class="sm">Level</text><text x="326" y="148" class="sm">Volume</text><rect x="62" y="156" width="44" height="20" rx="4" class="bx"/><rect x="116" y="156" width="44" height="20" rx="4" class="bx"/><rect x="170" y="156" width="44" height="20" rx="4" class="bx"/><path d="M110 60 C110 10 310 10 310 60" class="ln" stroke-width="6"/><rect x="96" y="50" width="28" height="36" rx="10" style="fill:var(--acc)"/><rect x="296" y="50" width="28" height="36" rx="10" style="fill:var(--acc)"/><text x="210" y="215" class="sm">Speech audiometer with headphones</text></svg></figure>
+</header>
+
+<section id="about">
+<h2>About the Project</h2>
+<p class="lead">An audiometer identifies hearing loss and measures its degree and nature. Pure-tone tests show whether a person hears sounds, but a <strong>speech audiometer</strong> checks whether they can understand spoken words. It plays recorded or live speech at calibrated levels, supplies masking noise from a second channel, and is used to find the speech reception threshold and to assess hearing aids.</p>
+<div class="grid">
+<div class="card"><h3>Objective</h3><p>Measure the speech reception threshold (SRT) and speech discrimination score (SDS) accurately and repeatably.</p></div>
+<div class="card"><h3>Need</h3><p>Tone tests alone do not show how well speech is understood, which matters most before prescribing hearing aids.</p></div>
+<div class="card"><h3>Outcome</h3><p>A calibrated, two-channel speech test with level control, masking and separate ear testing.</p></div>
+</div>
+</section>
+
+<section id="hearing">
+<h2>Mechanism of Hearing</h2>
+<p class="lead">Sound waves are longitudinal pressure waves. The outer ear collects them, three middle-ear bones carry them to the oval window, and the fluid-filled cochlea turns them into nerve impulses for the brain.</p>
+<div class="steps"><span class="step">Pinna &amp; ear canal</span><span class="arrow">→</span><span class="step">Eardrum</span><span class="arrow">→</span><span class="step">Malleus · Incus · Stapes</span><span class="arrow">→</span><span class="step">Oval window</span><span class="arrow">→</span><span class="step">Cochlea (hair cells)</span><span class="arrow">→</span><span class="step">Auditory nerve</span><span class="arrow">→</span><span class="step">Auditory cortex</span></div>
+<div class="grid" style="margin-top:18px">
+<div class="card"><h3>Outer ear</h3><p>Pinna and ear canal lead sound to the tympanic membrane.</p></div>
+<div class="card"><h3>Middle ear</h3><p>Three small bones couple the eardrum to the oval window. The Eustachian tube equalises pressure.</p></div>
+<div class="card"><h3>Inner ear</h3><p>The cochlea converts fluid pressure waves into nerve impulses. High frequencies act at the base, low at the apex.</p></div>
+</div>
+</section>
+
+<section id="loss">
+<h2>Types and Degrees of Hearing Loss</h2>
+<p class="lead"><strong>Conductive loss</strong> is reduced transmission of sound through the middle ear. <strong>Sensori-neural loss</strong> is a disorder of the cochlea and its nerve connections. The audiogram separates the two and shows the degree of loss in dB HL.</p>
+<div class="tablebox"><table>
+<tr><th>Degree of hearing loss</th><th>Range (dB HL)</th></tr>
+<tr><td>Normal</td><td>−10 to 15</td></tr><tr><td>Slight</td><td>16 to 25</td></tr><tr><td>Mild</td><td>26 to 40</td></tr><tr><td>Moderate</td><td>41 to 55</td></tr><tr><td>Moderately severe</td><td>56 to 70</td></tr><tr><td>Severe</td><td>71 to 90</td></tr><tr><td>Profound</td><td>91+</td></tr>
+</table></div>
+<p class="lead" style="margin-top:10px"><em>Source: Clark, J. G. (1981), Asha, 23, 493–500.</em></p>
+</section>
+
+<section id="working">
+<h2>Block Diagram of Speech Audiometer</h2>
+<p class="lead">Speech from a live microphone, audio player or CD is chosen by the selector, gated by the interrupter, set to the required level by the attenuator, and sent to the chosen ear through the switching network.</p>
+<figure class="fig"><svg viewBox="0 0 900 300" role="img" aria-label="Speech audiometer block diagram"><defs><marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--acc)"/></marker></defs>
+<rect x="35" y="15" width="130" height="50" rx="8" class="bx"/><text x="100" y="45" class="tx">Sine wave generator</text>
+<rect x="185" y="15" width="130" height="50" rx="8" class="bx"/><text x="250" y="45" class="tx">Audio player</text>
+<rect x="335" y="15" width="130" height="50" rx="8" class="bx"/><text x="400" y="45" class="tx">Laser disc / CD</text>
+<rect x="485" y="15" width="130" height="50" rx="8" class="bx"/><text x="550" y="45" class="tx">Microphone</text>
+<rect x="635" y="15" width="130" height="50" rx="8" class="bx"/><text x="700" y="45" class="tx">Noise (masking)</text>
+<line x1="100" y1="65" x2="100" y2="118" class="ln" marker-end="url(#a2)"/><line x1="250" y1="65" x2="250" y2="118" class="ln" marker-end="url(#a2)"/><line x1="400" y1="65" x2="400" y2="118" class="ln" marker-end="url(#a2)"/><line x1="550" y1="65" x2="550" y2="118" class="ln" marker-end="url(#a2)"/><line x1="700" y1="65" x2="700" y2="118" class="ln" marker-end="url(#a2)"/>
+<rect x="35" y="120" width="730" height="40" rx="8" class="bx"/><text x="400" y="145" class="tx">Selector (chooses the input source)</text>
+<line x1="100" y1="160" x2="100" y2="198" class="ln" marker-end="url(#a2)"/><line x1="290" y1="160" x2="290" y2="198" class="ln" marker-end="url(#a2)"/>
+<rect x="35" y="200" width="130" height="50" rx="8" class="bx"/><text x="100" y="222" class="tx">VU meter</text><text x="100" y="239" class="sm">Monitors level</text>
+<rect x="225" y="200" width="130" height="50" rx="8" class="bx"/><text x="290" y="222" class="tx">Interrupter</text><text x="290" y="239" class="sm">Tone/speech on-off</text>
+<rect x="395" y="200" width="130" height="50" rx="8" class="bx"/><text x="460" y="222" class="tx">Attenuator</text><text x="460" y="239" class="sm">5 dB steps</text>
+<rect x="565" y="200" width="130" height="50" rx="8" class="bx"/><text x="630" y="222" class="tx">Switching network</text><text x="630" y="239" class="sm">Left / Right ear</text>
+<rect x="735" y="200" width="130" height="50" rx="8" class="bx"/><text x="800" y="222" class="tx">Earphones</text><text x="800" y="239" class="sm">or loudspeakers</text>
+<line x1="355" y1="225" x2="393" y2="225" class="ln" marker-end="url(#a2)"/><line x1="525" y1="225" x2="563" y2="225" class="ln" marker-end="url(#a2)"/><line x1="695" y1="225" x2="733" y2="225" class="ln" marker-end="url(#a2)"/>
+<text x="450" y="282" class="sm">Redrawn from Khandpur, Handbook of Biomedical Instrumentation, §17.5</text></svg><figcaption>Fig 1. Block diagram of a speech audiometer</figcaption></figure>
+</section>
+
+<section id="components">
+<h2>Components and Their Function</h2>
+<div class="tablebox"><table>
+<tr><th>Block</th><th>Function</th></tr>
+<tr><td>Microphone + two-stage amplifier</td><td>Live-voice input, mainly for communication with the patient</td></tr>
+<tr><td>Tape / audio player, CD</td><td>Recorded word lists for threshold and discrimination tests; also recorded masking signals</td></tr>
+<tr><td>Selector</td><td>Selects which source feeds the audiometer</td></tr>
+<tr><td>Interrupter</td><td>Switches the signal on and off</td></tr>
+<tr><td>Attenuator</td><td>Sets the output level, in 5 dB steps</td></tr>
+<tr><td>VU meter</td><td>Shows the speech level so it can be kept calibrated</td></tr>
+<tr><td>Noise generator (second channel)</td><td>Supplies masking noise to the non-test ear</td></tr>
+<tr><td>Switching network</td><td>Routes the signal to the left or right earphone</td></tr>
+<tr><td>Headphones or loudspeakers</td><td>Output transducers; the two speakers are 25 W each</td></tr>
+</table></div>
+</section>
+
+<section id="tests">
+<h2>Speech Audiometry Tests</h2>
+<div class="grid" style="margin-top:18px">
+<div class="card"><h3>SRT</h3><p>Speech Reception Threshold: the level at which the patient correctly repeats 50% of two-syllable words (spondees) such as shotgun, aeroplane, workshop.</p></div>
+<div class="card"><h3>SDS</h3><p>Speech Discrimination Score: the number of words correctly repeated, expressed as a percentage.</p></div>
+</div>
+<figure class="fig" style="max-width:520px;margin:18px auto"><svg viewBox="0 0 480 260" role="img" aria-label="SRT curve"><rect x="60" y="20" width="390" height="200" style="fill:none;stroke:var(--line)"/><g class="gr"><line x1="60" y1="70" x2="450" y2="70"/><line x1="60" y1="120" x2="450" y2="120"/><line x1="60" y1="170" x2="450" y2="170"/></g><path d="M70 214 C170 214 190 190 240 120 S330 28 440 26" class="ln" stroke-width="3"/><line x1="60" y1="120" x2="240" y2="120" style="stroke:var(--acc);stroke-dasharray:5 4"/><line x1="240" y1="120" x2="240" y2="220" style="stroke:var(--acc);stroke-dasharray:5 4"/><circle cx="240" cy="120" r="6" style="fill:var(--acc)"/><g class="sm"><text x="50" y="24" style="text-anchor:end">100%</text><text x="50" y="124" style="text-anchor:end">50%</text><text x="50" y="224" style="text-anchor:end">0%</text><text x="240" y="240">SRT</text><text x="255" y="254">Presentation level (dB HL) →</text><text x="14" y="125" transform="rotate(-90 14 125)">Words correct</text></g></svg><figcaption>Fig 2. Idealised curve showing the SRT at the 50% point</figcaption></figure>
+<h3 style="margin:22px 0 8px">Test Procedure</h3>
+<div class="steps"><span class="step">1. Place earphones</span><span class="arrow">→</span><span class="step">2. Test one ear at a time</span><span class="arrow">→</span><span class="step">3. Play spondee word list</span><span class="arrow">→</span><span class="step">4. Patient repeats each word</span><span class="arrow">→</span><span class="step">5. Lower the level in steps</span><span class="arrow">→</span><span class="step">6. Record the 50% level</span></div>
+</section>
+
+<section id="setup">
+<h2>Test Environment</h2>
+<div class="grid" style="margin-top:18px">
+<div class="card"><h3>Sound cabin</h3><p>Live-voice tests are done in a sound cabin so the patient cannot hear the audiologist directly. Same-room testing gives false results, especially with near-normal hearing.</p></div>
+<div class="card"><h3>Two-room set-up</h3><p>The audiologist works in the equipment room with the speech audiometer while the patient is tested in the evaluation room.</p></div>
+<div class="card"><h3>Attenuation</h3><p>Double-wall construction with absorbing material gives about 25 dB attenuation at 125 Hz and 60 dB between 1000 and 8000 Hz.</p></div>
+<div class="card"><h3>Live vs recorded</h3><p>Live voice is mainly for communication because it is unreliable. Recorded speech gives repeatable results.</p></div>
+</div>
+</section>
+
+<section id="uses">
+<h2>Applications</h2>
+<div class="card" style="margin-top:18px"><ul>
+<li>Finding the speech reception threshold for diagnosis</li>
+<li>Assessing hearing-aid performance and selecting aids</li>
+<li>Hospital and ENT clinic hearing assessment</li>
+<li>Follow-up monitoring and rehabilitation</li>
+</ul></div>
+</section>
+
+<section id="ref">
+<h2>Reference</h2>
+<div class="card" style="margin-top:18px"><p>R.S. Khandpur, <em>Handbook of Biomedical Instrumentation</em>, Chapter 17: Audiometers and Hearing Aids (§17.1, §17.3–17.5).<br>Course material: Unit IV, 21BMC402J, Dr. Lakshmi Prabha P, SRM Institute of Science and Technology.</p></div>
+</section>
+
+</div>
+
+<footer>© 2026 Speech Audiometer · Nandhini Settu (RA2311013010048) · 21BMC402J – Biomedical Equipments for Clinical Applications</footer>
+</body>
+</html>
